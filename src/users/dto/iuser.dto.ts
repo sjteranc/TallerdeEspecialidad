@@ -34,3 +34,36 @@ export class UserDTO {
     @IsBoolean()
     isActive:boolean;
 }
+export class UserUpdateDTO {
+    @IsNotEmpty()
+    @IsString()
+    firstName: string;
+
+    @IsString()
+    lastName: string;
+
+    @IsNotEmpty()
+    @IsString()
+    cellPhone: string;
+
+    @IsNotEmpty()
+    @IsEmail()
+    @IsString()
+    email: string;
+
+    @IsNotEmpty()
+    @IsString()
+    username: string;
+
+    @IsNotEmpty()
+    @IsString()
+    password: string;
+
+    @IsNotEmpty()
+    @IsEnum(ROLES)
+    role: ROLES;
+
+    @IsNotEmpty()
+    @IsBoolean()
+    isActive:boolean;
+}
